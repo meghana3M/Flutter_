@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice/counter.dart';
 class LoginUI extends StatelessWidget{
   LoginUI({super.key});
   final _formKey = GlobalKey<FormState>();
@@ -77,7 +78,10 @@ class LoginUI extends StatelessWidget{
                 child: Text('Login',style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400,color: Colors.white
 
 
-                ),))
+                ),)),
+                ElevatedButton(onPressed: (){
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>CounterApp()) );
+                }, child: Text('nextpage'))
 
               ],
             ),
