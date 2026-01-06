@@ -1,14 +1,18 @@
 
 import 'package:flutter/material.dart';
 class CounterApp extends StatefulWidget{
-  const CounterApp({super.key});
+  final String name;
+  final int age;
+  const CounterApp({super.key,required this.name, required this.age});
   @override
   State<CounterApp> createState() => _CounterAppState();
 }
+
 class _CounterAppState extends State<CounterApp>{
   late int counter = min;
   final int min=0;
   final int max = 10;
+
 
   void decrement(){
     if(counter>min){
@@ -34,7 +38,7 @@ class _CounterAppState extends State<CounterApp>{
   Widget build(BuildContext context){
     return Scaffold(
       body: Center(
-        child: Text('${counter} ,Welcome back'),
+        child: Text('${counter} ${widget.name} ,Welcome back'),
       ),
       // floatingActionButton: Row(
       //   mainAxisAlignment: MainAxisAlignment.center,
@@ -46,9 +50,11 @@ class _CounterAppState extends State<CounterApp>{
       //     FloatingActionButton(onPressed: reset, child: Icon(Icons.reset_tv),),
       //   ],
       // ),
+
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+
           IconButton(
             icon: const Icon(Icons.remove),
             onPressed: counter == min ? null : decrement,

@@ -80,7 +80,7 @@ class LoginUI extends StatelessWidget{
 
                 ),)),
                 ElevatedButton(onPressed: (){
-                  Navigator.push(context,MaterialPageRoute(builder: (context)=>CounterApp()) );
+                  Navigator.push(context,MaterialPageRoute(builder: (context)=>CounterApp(name : 'Meghana',age:24)) );
                 }, child: Text('nextpage'))
 
               ],
