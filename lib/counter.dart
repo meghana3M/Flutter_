@@ -11,7 +11,7 @@ class CounterApp extends StatefulWidget{
 class _CounterAppState extends State<CounterApp>{
   late int counter = min;
   final int min=0;
-  final int max = 10;
+  final int max = 20;
 
 
   void decrement(){
