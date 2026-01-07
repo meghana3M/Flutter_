@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'counter.dart';
 import 'loginUI.dart';
 void main(){
   runApp(MyApp());

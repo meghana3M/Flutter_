@@ -3,6 +3,9 @@ import 'package:practice/counter.dart';
 class LoginUI extends StatelessWidget{
   LoginUI({super.key});
   final _formKey = GlobalKey<FormState>();
+  void onLogin(BuildContext context){
+    Navigator.push(context,MaterialPageRoute(builder: (_)=>CounterApp(name : 'Meghana',age:24)) );
+  }
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -79,9 +82,8 @@ class LoginUI extends StatelessWidget{
 
 
                 ),)),
-                ElevatedButton(onPressed: (){
-                  Navigator.push(context,MaterialPageRoute(builder: (context)=>CounterApp(name : 'Meghana',age:24)) );
-                }, child: Text('nextpage'))
+                ElevatedButton(onPressed: ()=> onLogin(context) ,
+                    child: Text('nextpage'))
 
               ],
             ),
