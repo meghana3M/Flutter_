@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice/to_do_list.dart';
 
 import 'loginUI.dart';
 void main(){
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context){
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginUI(),
+      home: TaskListScreen(),
     );
   }
 }
